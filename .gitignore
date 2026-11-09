@@ -1,6 +1,7 @@
 # Build results
 bin/
 obj/
+sreenus/
 
 # Visual Studio
 .vs/
