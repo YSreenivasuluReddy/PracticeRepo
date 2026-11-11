@@ -1,13 +1,16 @@
+
 # Build results
-bin/
-obj/
+[Bb]in/
+[Oo]bj/
 
 # Visual Studio
 .vs/
+**/.vs/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
+*.vsidx
 
 # Rider
 .idea/
@@ -42,3 +45,8 @@ secrets.json
 # Temporary files
 *.tmp
 *.temp
+
+# Angular
+node_modules/
+dist/
+.angular/
