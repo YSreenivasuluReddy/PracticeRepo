@@ -14,6 +14,7 @@ export class EmployeeDetailsComponent {
 constructor(private sr:EmpService){
   //this.getempdetails();
 }
+//here MatPaginator is a pre-built component(we call child component)
  @ViewChild(MatPaginator) paginator!: MatPaginator;
  displayedColumns: string[] = [
     'id',
@@ -35,11 +36,15 @@ empdetails: any =[];
  getempdetails(){
   return this.sr.getEmployees().subscribe(
     {
+      //Executes when the Observable emits data.
+      //when the backend successfully returns employee records, 
+      // next() receives them.
       next: (result) => {
         console.log(result);
         this.dataSource.data = result;
         // this.empdetails = result;
       },
+      //when the backend thrown error error() receives them.
       error: (error) => {
         console.error('Error fetching employee details:', error);
       }

@@ -25,8 +25,8 @@ export class EmpService {
 
   //here i want to craete the function to add the Employee.
 
-  addEmployee(data:any){
-    return this.http.post(this.apiurl,data);
+  addEmployee(employee:any){
+    return this.http.post(`${this.apiurl}/Employee`,employee);
   }
 
 

@@ -1,1 +1,81 @@
-<p>add-employee works!</p>
+<div class="container">
+
+  <div class="employee-card">
+
+    <h2>Add Employee</h2>
+
+    <form [formGroup]="employeeForm" (ngSubmit)="addEmployee()">
+
+      <!-- Employee Name -->
+      <div class="form-group">
+
+        <label>Employee Name</label>
+
+        <input
+          type="text"
+          formControlName="name"
+          placeholder="Enter employee name">
+
+        @if (employeeForm.get('name')?.touched &&
+             employeeForm.get('name')?.hasError('required')) {
+          <span class="error">Employee name is required</span>
+        }
+
+      </div>
+
+      <!-- Department -->
+      <div class="form-group">
+
+        <label>Department</label>
+
+        <input
+          type="text"
+          formControlName="department"
+          placeholder="Enter department">
+
+        @if (employeeForm.get('department')?.touched &&
+             employeeForm.get('department')?.hasError('required')) {
+          <span class="error">Department is required</span>
+        }
+
+      </div>
+
+      <!-- Salary -->
+      <div class="form-group">
+
+        <label>Salary</label>
+
+        <input
+          type="number"
+          formControlName="salary"
+          placeholder="Enter salary">
+
+        @if (employeeForm.get('salary')?.touched &&
+             employeeForm.get('salary')?.hasError('required')) {
+          <span class="error">Salary is required</span>
+        }
+
+        @if (employeeForm.get('salary')?.touched &&
+             employeeForm.get('salary')?.hasError('min')) {
+          <span class="error">Salary must be greater than zero</span>
+        }
+
+      </div>
+
+      <!-- Success Message -->
+      @if (successMessage) {
+        <p class="success">{{ successMessage }}</p>
+      }
+
+      <!-- Error Message -->
+      @if (errorMessage) {
+        <p class="error">{{ errorMessage }}</p>
+      }
+
+      <button type="submit">Add Employee</button>
+
+    </form>
+
+  </div>
+
+</div>
