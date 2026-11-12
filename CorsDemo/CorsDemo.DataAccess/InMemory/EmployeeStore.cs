@@ -33,6 +33,29 @@ namespace CorsDemo.DataAccess.InMemory
                 Name = "Kiran",
                 Department = "Finance",
                 Salary = 40000
+            },
+             new Employee
+            {
+                Id = 4,
+                Name = "Sreenu Reddy Y",
+                Department = "Dot Net Developer",
+                Salary = 65000
+            },
+
+            new Employee
+            {
+                Id = 5,
+                Name = "Shashank Reddy",
+                Department = "HR",
+                Salary = 70000
+            },
+
+            new Employee
+            {
+                Id = 6,
+                Name = "Deepak Reddy",
+                Department = "FrontEnd Developer",
+                Salary = 80000
             }
         };
         
