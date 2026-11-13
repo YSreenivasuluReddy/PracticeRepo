@@ -9,6 +9,7 @@ namespace CorsDemo.API.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
+        
         private readonly IEmployeeService _employeeService;
 
         // Constructor Injection
