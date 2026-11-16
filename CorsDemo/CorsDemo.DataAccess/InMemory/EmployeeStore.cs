@@ -16,7 +16,8 @@ namespace CorsDemo.DataAccess.InMemory
                 Id = 1,
                 Name = "Srinivas",
                 Department = "IT",
-                Salary = 35000
+                Salary = 35000,
+                JoiningDate = new DateTime(2026, 1, 25)
             },
 
             new Employee
@@ -24,7 +25,8 @@ namespace CorsDemo.DataAccess.InMemory
                 Id = 2,
                 Name = "Ramesh",
                 Department = "HR",
-                Salary = 30000
+                Salary = 30000,
+                JoiningDate = new DateTime(2026, 3, 17)
             },
 
             new Employee
@@ -32,14 +34,16 @@ namespace CorsDemo.DataAccess.InMemory
                 Id = 3,
                 Name = "Kiran",
                 Department = "Finance",
-                Salary = 40000
+                Salary = 40000,
+                JoiningDate = new DateTime(2025, 10, 25)
             },
              new Employee
             {
                 Id = 4,
                 Name = "Sreenu Reddy Y",
                 Department = "Dot Net Developer",
-                Salary = 65000
+                Salary = 65000,
+                JoiningDate = new DateTime(2025, 5, 29)
             },
 
             new Employee
@@ -47,7 +51,8 @@ namespace CorsDemo.DataAccess.InMemory
                 Id = 5,
                 Name = "Shashank Reddy",
                 Department = "HR",
-                Salary = 70000
+                Salary = 70000,
+                JoiningDate = new DateTime(2022, 11, 06)
             },
 
             new Employee
@@ -55,7 +60,8 @@ namespace CorsDemo.DataAccess.InMemory
                 Id = 6,
                 Name = "Deepak Reddy",
                 Department = "FrontEnd Developer",
-                Salary = 80000
+                Salary = 80000,
+                JoiningDate = new DateTime(2020, 06, 19)
             }
         };
         
