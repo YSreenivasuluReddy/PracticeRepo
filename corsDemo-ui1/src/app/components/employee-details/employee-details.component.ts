@@ -2,11 +2,12 @@ import {AfterViewInit, Component, ViewChild,OnInit} from '@angular/core';
 import { EmpService } from '../../services/emp.service';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { CommonModule,CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-employee-details',
   standalone: true,
-  imports: [MatTableModule, MatPaginatorModule],
+  imports: [MatTableModule, MatPaginatorModule,CommonModule,CurrencyPipe],
   templateUrl: './employee-details.component.html',
   styleUrl: './employee-details.component.css'
 })
@@ -19,7 +20,8 @@ constructor(private sr:EmpService){
     'id',
     'name',
     'department',
-    'salary'
+    'salary',
+    'joiningdate'
   ];
 
   dataSource = new MatTableDataSource<any>([]);
