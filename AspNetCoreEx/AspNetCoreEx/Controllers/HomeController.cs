@@ -22,10 +22,32 @@ namespace AspNetCoreEx.Controllers
         //here get the all employee details
         //here without mention any http verb and if you run then it thrown error.
         [HttpGet]
+        [Route("GetEmployeeRecords")]
         public List<Employees> getEmployeeRecords()
         {
             //here i return the employees for that i took return type as employees.
             return Employees;
         }
+
+        [HttpGet]
+        [Route("GetEmployeeDetailsById")]
+        public List<Employees?> getEmployeesById(int id)
+        {
+            var employees = Employees.Where(x => x.EmployeeId == id).ToList();
+            return employees;
+        }
+
+        [HttpPut]
+        [Route("UpdateEmployeeDetailsById")]
+        public Employees updateEmployeeDetailsById(int id, Employees employee)
+        {
+            var employeedetails = Employees.Find(x => x.EmployeeId == id);
+            employeedetails.EmployeeName = employee.EmployeeName;
+            employeedetails.EmployeeSalary = employee.EmployeeSalary;
+            employeedetails.Designation = employee.Designation;
+
+            return employeedetails;
+        }
+
     }
 }
