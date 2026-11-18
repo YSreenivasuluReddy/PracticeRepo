@@ -49,5 +49,25 @@ namespace AspNetCoreEx.Controllers
             return employeedetails;
         }
 
+        [HttpPost]
+        [Route("CreateEmployee")]
+        public Employees CreateEmployee(Employees employee)
+        {
+            Employees.Add(employee);
+            return employee;
+        }
+
+        [HttpDelete]
+        [Route("DeleteEmployee")]
+        public Employees? DeleteEmployee(int id)
+        {
+            var deleteemprecord = Employees.Find(x => x.EmployeeId.Equals(id));
+
+            Employees.Remove(deleteemprecord);
+
+            return deleteemprecord;
+
+        }
+
     }
 }
