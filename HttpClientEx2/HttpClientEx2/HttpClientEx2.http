@@ -1,0 +1,6 @@
+@HttpClientEx2_HostAddress = http://localhost:5191
+
+GET {{HttpClientEx2_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
