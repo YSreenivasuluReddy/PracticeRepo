@@ -37,6 +37,7 @@ namespace DependencyInjectionDemo.Controllers
 
             var scoped2 =
                 _serviceProvider.GetRequiredService<Scoped>();
+            var transient3 = _serviceProvider.GetRequiredService<Transient>();
 
             return Ok(new
             {
@@ -49,7 +50,8 @@ namespace DependencyInjectionDemo.Controllers
                 Transient = new
                 {
                     FirstInstance = transient1.InstanceId,
-                    SecondInstance = transient2.InstanceId
+                    SecondInstance = transient2.InstanceId,
+                    ThirdInstance = transient3.InstanceId
                 },
 
                 Scoped = new

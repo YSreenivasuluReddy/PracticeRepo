@@ -22,6 +22,7 @@ namespace AspNetCoreEx.Controllers
         //here get the all employee details
         //here without mention any http verb and if you run then it thrown error.
         [HttpGet]
+        //https://localhost:8766/api/Home/GetEmployeeRecords
         [Route("GetEmployeeRecords")]
         public List<Employees> getEmployeeRecords()
         {
@@ -41,7 +42,7 @@ namespace AspNetCoreEx.Controllers
         [Route("UpdateEmployeeDetailsById")]
         public Employees updateEmployeeDetailsById(int id, Employees employee)
         {
-            var employeedetails = Employees.Find(x => x.EmployeeId == id);
+            var employeedetails = Employees.FirstOrDefault(x => x.EmployeeId == id);
             employeedetails.EmployeeName = employee.EmployeeName;
             employeedetails.EmployeeSalary = employee.EmployeeSalary;
             employeedetails.Designation = employee.Designation;

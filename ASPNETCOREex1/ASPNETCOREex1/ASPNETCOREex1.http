@@ -1,0 +1,6 @@
+@ASPNETCOREex1_HostAddress = http://localhost:5151
+
+GET {{ASPNETCOREex1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

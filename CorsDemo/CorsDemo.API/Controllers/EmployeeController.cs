@@ -16,6 +16,7 @@ namespace CorsDemo.API.Controllers
         public EmployeeController(IEmployeeService employeeService)
         {
             _employeeService = employeeService;
+            //EmployeeService sername = new EmployeeService();
         }
 
         // GET: api/employee
