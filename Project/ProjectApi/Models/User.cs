@@ -9,5 +9,6 @@
         public string Role { get; set; } = "User";
         public bool IsActive { get; set; } = true;
         public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
+        public string Mobile { get;  set; }
     }
 }
